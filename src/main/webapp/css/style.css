@@ -1,0 +1,75 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.grovalNavigation{
+    height: 120px;
+    text-align: center;
+    background-color: #95E1D3;
+    color: #000;    
+}
+
+.grovalNavigation > p{
+  	color: #333;
+	margin-top: 25px;
+	font-size: 45px
+}
+
+
+/*** フェードインアニメーションを作って ***/
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/*** bodyに反映させる ***/
+body{
+  animation: fadeIn 1s forwards;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+}
+.content{
+    flex: 1;
+    background-color: #EAFFD0;
+    text-align: center;
+
+}
+
+.localNavigation{
+    width: 300px;
+    text-align: center;
+    background-color:#FCE38A;
+    color: #fff;
+}
+
+
+.textlink02 a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #ceb849;
+	transition: width 0.3s;
+}
+
+.textlink02 a:hover::after {
+	width: 100%;
+}
+
+.textlink a {
+	position: relative;
+	color: #333;
+	text-decoration: none;
+	font-size: 30px
+	
+}
+.textlink a:hover {
+	color: #b99b00;
+}
